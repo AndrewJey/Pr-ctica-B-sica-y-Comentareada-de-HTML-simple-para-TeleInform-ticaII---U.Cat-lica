@@ -1,62 +1,128 @@
-<!DOCTYPE HTML5> <!--Documento de HTML5-->
-<!--@uthor: Andrés J. Jiménez Leandro, created: 2015-11-05 Jueves-->
-<html lang="es"> <!--HTML EN LENGUAJE ESPAÑOL-->
-<head> <!--Comandos de Encabezado-->
-<meta charset="UTF-8"> <!--Caracteres UNICODE en estandar UNIVERSAL-->
-<title>PRÁCTICA-01</title> <!--Título de Pestaña del Browser-->
-</head> <!--Cierre de encabezado-->
-<body style="background-color:#F5F6CE"> <!--Cuerpo del Documento-->
-<font size="5" color="RED"> <!--Formato de Fuente-->
-<!--u:subrayado;b:negrita;i:cursiva;h1=header1:encabezado titular-->
-<!--center:centrar innerText(texto interno desplegado en web)-->
-<u><b><i><h1><center> HOLA MUNDO </center></h1></i></b></u>
-</font> <!--Cierre del Formato de Fuente-->
-<br> <!--Salto de Línea-->
-<!--div:división;span:expansión;p:párrafo-->
-<div class="texto_principal">
-<span id="expansiónGeneral">
-<font size="6" color="black"><!--Formato de Fuente-->
-<p name="párrafo_Principal"> Ya programo HTML </p> 
-</font><!--Cierre del Formato de Fuente-->
-</span> <!--Cierre de la Expansión-->
-</div> <!--Cierre del divisor-->
-<br> <!--Salto de Línea-->
-<center><table border="3"> <!--Crear Tabla con 3px de borde-->
-<thead valign="middle"> <!--Encabezado de la tabla, para alinear todo a la mitad-->
-<tr> <!--tr=Table Row:Fila de la Tabla-->
-<th>NOMBRES</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Título Nombres-->
-<th>APELLIDOS</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Apellidos-->
-<th>EDAD</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Título Edad-->
-<th>TELÉFONO</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Teléfono-->
-<th>CELULAR</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Título Celular-->
-<th>eM@iL</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Título eM@iL-->
-<th>DIRECCIÓN</th> <!--th=TableHeader:Encabezado Titular de la Tabla - Dirección-->
-</tr><!--Cierre de la Fila de Tabla-->
-</thead> <!--Cierre del Encabezado de la Tabla-->
-<tbody valign="middle"> <!--Cuerpo de la Tabla, alineando todo a la mitad-->
-<tr> <!--tr=Table Row:Fila de la Tabla-->
-<!--LLENAR LA FILA DE DATOS SEGÚN CORRESPONDE:-->
-<td><!--td=TableData:Datos de la Tabla--><center>Andrés Joseph</center></td>
-<td><center>Jiménez Leandro</center></td>
-<td><center>28 años</center></td>
-<td><center>2460XXXX</CENTER></td>
-<td><CENTER>89651446</center></td>
-<td><center>ajimenezl@ucatolica.ac.cr</center></td>
-<td><center>La Abundancia de San Carlos</center></td>
-</tr><!--Cierre de la Fila de Tabla-->
-</tbody><!--Cierre del Cuerpo de la Tabla-->
-</center></table> <!--Cierre de la Tabla-->
-<br> <!--Salto de Línea-->
-<div class="texto_vinculado"> <!--Divisor de Textos-->
-<span id="expansiónDeLink"> <!--Expansión del Texto-->
-<font size="5" color="blue"><!--Formato de Fuente-->
-<!--ASÍ SE CREA UN HIPER-VÍNCULO EN HTML:-->
-<i><center><a href="http://es.wikipedia.org/wiki/HTML" title="Bibliografía HTML" target="_blank">Bibliografía</a></center></i><center>
-<!--
-target="_blank" // ES PARA ABRIR VÍNCULO EN PESTAÑA/PÁGINA NUEVA.
-target="_self" // ES PARA ABRIR VÍNCULO EN LA MISMA PESTAÑA/PÁGINA EN USO.
--->
-</font><!--Cierre del Formato de Fuente-->
-</body> <!--Cierre del Cuerpo del Documento HTML-->
-</html> <!--Cierre del Archivo HTML-->
-<p hidden="ESTOY OCULTO"> <!--Información oculta, solo para el programador-->
+<!DOCTYPE html> <!-- Documento estándar HTML5 -->
+<!-- @author: Andrés J. Jiménez Leandro, created: 2015-11-05 Jueves -->
+<html lang="es"> <!-- HTML en idioma español -->
+<head> <!-- Encabezado del documento -->
+  <meta charset="UTF-8"> <!-- Caracteres Unicode en estándar universal -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño adaptable a móvil y escritorio -->
+  <title>PRÁCTICA-01 — TeleInformática II</title> <!-- Título de pestaña del navegador -->
+  <style>
+    :root {
+      --bg: #f5f6ce;
+      --surface: #ffffff;
+      --accent: #b91c1c;
+      --link: #1d4ed8;
+      --border: #94a3b8;
+      --text: #111827;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08);
+    }
+    h1 {
+      margin: 0 0 0.75rem;
+      text-align: center;
+      color: var(--accent);
+      font-style: italic;
+      text-decoration: underline;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+    .texto_principal {
+      text-align: center;
+      font-size: 1.35rem;
+      margin: 1rem 0 1.75rem;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      border: 2px solid var(--border);
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.7rem 0.8rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background: #fef9c3;
+      font-weight: 700;
+    }
+    .texto_vinculado {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+    .texto_vinculado a { color: var(--link); font-weight: 600; }
+    .texto_vinculado a:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
+  </style>
+</head> <!-- Cierre de encabezado -->
+<body> <!-- Cuerpo del documento -->
+  <main>
+    <!-- h1 = encabezado principal titular -->
+    <h1>HOLA MUNDO</h1>
+
+    <!-- div: división; span: expansión; p: párrafo -->
+    <div class="texto_principal">
+      <span id="expansionGeneral">
+        <p data-name="párrafo_Principal">Ya programo HTML</p>
+      </span> <!-- Cierre de la expansión -->
+    </div> <!-- Cierre del divisor -->
+
+    <div class="table-wrap">
+      <table> <!-- Tabla semántica y adaptable -->
+        <thead> <!-- Encabezado de la tabla -->
+          <tr> <!-- tr = Table Row: fila de la tabla -->
+            <th scope="col">NOMBRES</th> <!-- th = Table Header -->
+            <th scope="col">APELLIDOS</th>
+            <th scope="col">EDAD</th>
+            <th scope="col">TELÉFONO</th>
+            <th scope="col">CELULAR</th>
+            <th scope="col">eM@iL</th>
+            <th scope="col">DIRECCIÓN</th>
+          </tr>
+        </thead>
+        <tbody> <!-- Cuerpo de la tabla -->
+          <tr>
+            <!-- Llenar la fila de datos según corresponde -->
+            <td>Andrés Joseph</td>
+            <td>Jiménez Leandro</td>
+            <td>28 años</td>
+            <td>2460XXXX</td>
+            <td>89651446</td>
+            <td><a href="mailto:ajimenezl@ucatolica.ac.cr">ajimenezl@ucatolica.ac.cr</a></td>
+            <td>La Abundancia de San Carlos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="texto_vinculado"> <!-- Divisor de textos -->
+      <span id="expansionDeLink"> <!-- Expansión del texto -->
+        <!-- Así se crea un hipervínculo seguro en HTML5: target="_blank" abre nueva pestaña y rel="noopener noreferrer" protege la sesión -->
+        <a href="https://es.wikipedia.org/wiki/HTML" title="Bibliografía HTML" target="_blank" rel="noopener noreferrer">Bibliografía</a>
+      </span>
+    </div>
+
+    <!-- Información oculta, solo visible en el código fuente -->
+    <p hidden>ESTOY OCULTO</p>
+  </main>
+</body> <!-- Cierre del cuerpo del documento HTML -->
+</html> <!-- Cierre del archivo HTML -->

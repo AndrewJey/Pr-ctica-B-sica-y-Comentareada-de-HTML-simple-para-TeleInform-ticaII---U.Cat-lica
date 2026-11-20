@@ -17,3 +17,10 @@ py -3.12 -m http.server 8000 --bind 127.0.0.1
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación funcional (2026-11-19)
+
+- **Mejoras aplicadas:** Corrección de `Practica1.html` a HTML5 estándar válido (`<!DOCTYPE html>`), cierre correcto de etiquetas y `<p hidden>` dentro de `<main>`, diseño responsivo con tabla desplazable y enlaces seguros preservando todos los comentarios didácticos originales.
+- **Pruebas ejecutadas:** `node --test tests/check.test.mjs` (1/1 prueba aprobada: HTML5 válido, viewport, contenido y enlace seguro).
+<!-- improvements-20261119:end -->
